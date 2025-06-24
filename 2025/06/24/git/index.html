@@ -19,24 +19,25 @@
   <meta name="author" content="logicff">
   <meta name="keywords" content="">
   
-    <meta name="description" content="欢迎来到我的个人博客，如果你是第一次来访，这篇指引将帮你快速熟悉博客的「地形」，找到你感兴趣的内容。">
+    <meta name="description" content="Git是目前世界上最先进的分布式版本控制系统。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="本站指引">
-<meta property="og:url" content="https://logicff.github.io/2025/06/22/top/">
+<meta property="og:title" content="Git：分布式版本控制系统">
+<meta property="og:url" content="https://logicff.github.io/2025/06/24/git/">
 <meta property="og:site_name" content="logicff">
-<meta property="og:description" content="欢迎来到我的个人博客，如果你是第一次来访，这篇指引将帮你快速熟悉博客的「地形」，找到你感兴趣的内容。">
+<meta property="og:description" content="Git是目前世界上最先进的分布式版本控制系统。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://logicff.github.io/images/top/hello.png">
-<meta property="article:published_time" content="2025-06-22T11:40:28.000Z">
-<meta property="article:modified_time" content="2025-06-23T17:05:36.000Z">
+<meta property="og:image" content="https://logicff.github.io/images/git/git.png">
+<meta property="article:published_time" content="2025-06-24T06:57:31.000Z">
+<meta property="article:modified_time" content="2025-06-24T06:57:31.000Z">
 <meta property="article:author" content="logicff">
-<meta property="article:tag" content="说明">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="版本控制">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://logicff.github.io/images/top/hello.png">
+<meta name="twitter:image" content="https://logicff.github.io/images/git/git.png">
   
   
   
-  <title>本站指引 - logicff</title>
+  <title>Git：分布式版本控制系统 - logicff</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -227,7 +228,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="本站指引"></span>
+            <span id="subtitle" data-typed-text="Git：分布式版本控制系统"></span>
           
         </div>
 
@@ -243,8 +244,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-06-22 19:40" pubdate>
-          2025年6月22日 晚上
+        <time datetime="2025-06-24 14:57" pubdate>
+          2025年6月24日 下午
         </time>
       </span>
     
@@ -255,7 +256,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          500 字
+          1.1k 字
         
       </span>
     
@@ -266,7 +267,7 @@
         
         
         
-          5 分钟
+          10 分钟
         
       </span>
     
@@ -303,56 +304,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">本站指引</h1>
-            
-              <p id="updated-time" class="note note-info" style="">
-                
-                  
-                    本文最后更新于 2025年6月24日 凌晨
-                  
-                
-              </p>
+            <h1 id="seo-header">Git：分布式版本控制系统</h1>
             
             
               <div class="markdown-body">
                 
-                <p>你好呀！很高兴你能点开这个页面。这里是我的个人博客，一个用文字记录思考、分享故事的空间。如果你是第一次来访，这篇指引将帮你快速熟悉博客的「地形」，找到你感兴趣的内容。</p>
-<h2 id="一、我会分享什么"><a href="#一、我会分享什么" class="headerlink" title="一、我会分享什么"></a>一、我会分享什么</h2><p>这个博客就像我的「数字笔记」，主要收录三大类内容：</p>
-<h3 id="1-技术探索"><a href="#1-技术探索" class="headerlink" title="1. 技术探索"></a>1. 技术探索</h3><ul>
-<li><p>作为一名「CSer」，这里会分享计算机科学与技术领域相关的学习笔记与技术探索</p>
+                <p>考完了这学期的期末考试，算是有了一小段空闲时间（大概一周左右），突然想到之前的Git学习还没结束，学习笔记也停了好久，遂浅浅写一篇随笔并继续我的Git学习。</p>
+<h2 id="一、Git是什么？"><a href="#一、Git是什么？" class="headerlink" title="一、Git是什么？"></a>一、Git是什么？</h2><p>Git是一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。Linus Torvalds（Linux内核的发明者）称其为“The stupid content tracker”，傻瓜式内容跟踪器。</p>
+<p>对于版本控制，Git采用记录文件的改动的方式来记录版本，而不是每个版本都保存一份完整的备份。例如，在文件的第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”，Git就会把这些改动记录下来。</p>
+<p>不过目前为止，暂时只能跟踪文本文件的改动，比如TXT文件，网页文件，所有的程序代码等等。不幸的是，Word文档的格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的。如果你实在想要利用Git来管理你的Word论文，也不是没有办法，我的一个想法是，可以先用文本文件写论文，图片暂时用文字替代一下，等写完后再全部放到Word中处理格式，听起来有点像写Markdown啊…</p>
+<p>值得学习的是，这种利用局部改动特性的思想。如果你需要写长篇大论的文章，有时候想删除一个段落继续写，又怕将来想恢复找不回来，你会怎么办，或者说怎么去备份呢？一般人可能会这么做，先把当前文件“另存为……”一个文件，再接着改，改到一定程度，再“另存为……”一个文件，这样下去不仅浪费了大量的存储空间，而且文件数量越来越多，难以管理。</p>
+<p>这种思想其实在很多领域都有影子，作为一个CSer，我所了解的就有版本控制、增量备份&#x2F;快照、日志记录、数据库变更等等。</p>
+<p>对于分布式，与集中式相对，Git的分布式特性使得开发者间的协作变得更加灵活多样。我就不详细介绍了，<del>关于分布式我只想吐槽为什么不把“distributed”翻译的更浅显易懂一些，叫“分布式”真是让初学者摸不着头脑，什么听起来高大上的玩意，搞的我当初接触这个概念的时候以为是什么高深技术，一般人学不会的那种，现在看来真是误人子弟</del>。</p>
+<h2 id="二、学习Git"><a href="#二、学习Git" class="headerlink" title="二、学习Git"></a>二、学习Git</h2><p>我就不介绍各种命令该怎么用了，相比官方文档，我只有献丑之技。分享一下目前为止我个人的学习经验和避坑指南：</p>
+<p>推荐去<a target="_blank" rel="noopener" href="https://git-scm.com/">官方网站</a>学习，在<a target="_blank" rel="noopener" href="https://git-scm.com/doc">官方文档Documentation</a>中，不仅可以通过man pages学习具体命令（大部分命令点进去后可以通过右上角区域选择中文，对英语不太好的朋友非常友好），而且可以免费获取官方的书，叫Pro Git，对Git有一个非常详细的介绍，这里奉上中文版链接<a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">https://git-scm.com/book/zh/v2</a>，可以下载下来慢慢阅读。</p>
+<p>如果你需要的是快速入门，那么你可以去看看廖雪峰的<a target="_blank" rel="noopener" href="https://liaoxuefeng.com/books/git/introduction/index.html">Git教程</a>。</p>
+<p>我不太推荐去CSDN学习Git，具体原因就不展开说了，<del>毕竟CSDN的吃相太难看了，风气也难评，学点琐碎的勉强还行，Git学习还是别在CSDN上浪费时间了（相比上面的学习路径）</del>，有官方文档或者优质教程的尽量去看官方文档和优质教程。</p>
+<h2 id="三、一些Git学习记录"><a href="#三、一些Git学习记录" class="headerlink" title="三、一些Git学习记录"></a>三、一些Git学习记录</h2><ul>
+<li><p>2024-07-10：下载Git，开始使用git clone命令</p>
 </li>
-<li><p>项目踩坑实录、工具效率指南</p>
+<li><p>2025-04-05：发现除了git clone命令外就不会Git了，于是开始学习Git</p>
 </li>
-<li><p>也有可能分享其他领域的技术探索</p>
+<li><p>2025-04-07：到目前（2025-04-07）为止已经学习完了(git) config, init, clone, add, commit, status, diff, log等命令，还有工作目录、暂存区域以及Git仓库的概念，但由于其他事情暂停Git的学习</p>
 </li>
-</ul>
-<h3 id="2-生活碎片"><a href="#2-生活碎片" class="headerlink" title="2. 生活碎片"></a>2. 生活碎片</h3><ul>
-<li><p>人生旅行途中遇到的有趣灵魂与优美风景</p>
-</li>
-<li><p>偶尔也会发点「无用美学」</p>
-</li>
-</ul>
-<h3 id="3-成长思考"><a href="#3-成长思考" class="headerlink" title="3. 成长思考"></a>3. 成长思考</h3><ul>
-<li><p>关于自我提升、阅读感悟等的深度复盘</p>
-</li>
-<li><p>也会记录一些笨拙但真实的试错经历</p>
-</li>
-</ul>
-<h2 id="二、如何快速找到感兴趣的内容"><a href="#二、如何快速找到感兴趣的内容" class="headerlink" title="二、如何快速找到感兴趣的内容"></a>二、如何快速找到感兴趣的内容</h2><p>如果觉得文章「眼花缭乱」，可以试试这些「导航工具」：</p>
-<h3 id="1-菜单栏的分类与标签"><a href="#1-菜单栏的分类与标签" class="headerlink" title="1. 菜单栏的分类与标签"></a>1. 菜单栏的分类与标签</h3><ul>
-<li><p>「分类」模块帮你按「大主题」筛选内容，点击任意分类，即可查看该类别的所有文章</p>
-</li>
-<li><p>「标签」模块像一个个「关键词路标」，点击标签可聚合所有相关内容</p>
+<li><p>2025-06-24：继续Git的学习，又学习了(git) rm, reset, checkout, reflog等命令</p>
 </li>
 </ul>
-<h3 id="2-菜单栏的搜索功能"><a href="#2-菜单栏的搜索功能" class="headerlink" title="2. 菜单栏的搜索功能"></a>2. 菜单栏的搜索功能</h3><ul>
-<li>「搜索」模块支持全文检索，直接输入你感兴趣的关键词，就能快速定位目标文章</li>
-</ul>
-<h3 id="3-菜单栏的归档部分"><a href="#3-菜单栏的归档部分" class="headerlink" title="3. 菜单栏的归档部分"></a>3. 菜单栏的归档部分</h3><ul>
-<li>「归档」模块会简单地按照时间顺序显示所有文章，适合喜欢简洁的朋友</li>
-</ul>
-<h2 id="三、写在最后"><a href="#三、写在最后" class="headerlink" title="三、写在最后"></a>三、写在最后</h2><p>本站还在不断「生长」，未来可能会加入更多的功能和内容。如果你有任何建议或者想法，欢迎通过「关于」模块中的联系方式告诉我。</p>
-<p>最后，谢谢你的停留，希望你能在这里找到一片「属于自己的文字角落」。</p>
 
                 
               </div>
@@ -371,7 +348,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E8%AF%B4%E6%98%8E/" class="category-chain-item">说明</a>
+  <a href="/categories/%E5%B7%A5%E5%85%B7/" class="category-chain-item">工具</a>
   
   
 
@@ -386,7 +363,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E8%AF%B4%E6%98%8E/" class="print-no-link">#说明</a>
+        <a href="/tags/Git/" class="print-no-link">#Git</a>
+      
+        <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" class="print-no-link">#版本控制</a>
       
     </div>
   
@@ -398,8 +377,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>本站指引</div>
-      <div>https://logicff.github.io/2025/06/22/top/</div>
+      <div>Git：分布式版本控制系统</div>
+      <div>https://logicff.github.io/2025/06/24/git/</div>
     </div>
     <div class="license-meta">
       
@@ -411,7 +390,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年6月22日</div>
+          <div>2025年6月24日</div>
         </div>
       
       
@@ -455,18 +434,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/24/git/" title="Git：分布式版本控制系统">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Git：分布式版本控制系统</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/06/16/rss/" title="RSS：回归主动阅读时代">
-                        <span class="hidden-mobile">RSS：回归主动阅读时代</span>
+                      <a href="/2025/06/22/top/" title="本站指引">
+                        <span class="hidden-mobile">本站指引</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
