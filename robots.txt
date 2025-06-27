@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /js/
 Disallow: /css/
 Disallow: /xml/
+
+Sitemap: https://logicff.github.io/sitemap.xml
