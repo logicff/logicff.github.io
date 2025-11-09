@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>6.5840：Lab2 - Key/Value Server</title>
+    <link href="/2025/11/09/6.5840-2/"/>
+    <url>/2025/11/09/6.5840-2/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Key-Value-Server实验"><a href="#Key-Value-Server实验" class="headerlink" title="Key&#x2F;Value Server实验"></a>Key&#x2F;Value Server实验</h2><p>这个实验感觉还是很简单的，上个月（2025-10）月底看完vm-ft论文后没花多久就做完了。感觉与之前做完的Lab1和最近做完的Lab3A相比，这个实验是为了熟悉一下K&#x2F;V存储，对RPC和分布式系统有一个更加深刻的认知，为后面的实验做铺垫，而且个人认为，即使不看vm-ft论文也能做这个实验，具体实验任务和提示都比较详细，除了基于K&#x2F;V服务的分布式锁外，其他任务基本上是“照着做”就行了。</p><p>这里呈上我自己的实现<a href="https://github.com/logicff/mit6.5840">https://github.com/logicff/mit6.5840</a>。</p><h2 id="Fault-Tolerant-Virtual-Machines（vm-ft论文）"><a href="#Fault-Tolerant-Virtual-Machines（vm-ft论文）" class="headerlink" title="Fault-Tolerant Virtual Machines（vm-ft论文）"></a>Fault-Tolerant Virtual Machines（vm-ft论文）</h2><p>理解论文其实不难，主要的点就是VMware FT的主从备份架构和FT Protocol，以及使用replicated state-machines，很多关于如何保证可用性和一致性的细节都有在论文中提到过。个人建议的话，可以先读论文（即使是粗略的读），然后看一下课程，最后再看看6.5840的关于vm-ft的FAQ。</p><h2 id="一点想法"><a href="#一点想法" class="headerlink" title="一点想法"></a>一点想法</h2><ol><li><p>关于FT Protocol的一个可能优化：按照论文中的描述，一个带有输出的请求的大致流程应该是<code>请求发送到主虚拟机-&gt;主虚拟机的VMM向备份虚拟机发送日志条目并让主虚拟机处理请求-&gt;主虚拟机的VMM收到备份虚拟机的确认后转发主虚拟机的输出</code>，如果我们让输出从备份虚拟机发出呢，这样是不是相当于在处理时间相远小于虚拟机之间传输时间的情况下，可以提升整个系统的效率，为了保证一定的正确，备份虚拟机在发出输出的同时向主虚拟机确认即可，这种方案在外部看来从输入到输出相比原方案快了一个主备单向交互时间。不过，我暂时无法验证具体可行性，毕竟对目前的我而言还是很难。</p></li><li><p>面对multi-processor，VMware FT的主备虚拟机无法保证同步，相同的程序在不同的计算机上可能会有不同的指令流。这种情况的一种解决方案是采用内存快照进行同步，但一次内存快照的传输时间可能会很大，我的一个想法是局部快照（比如，只对有变化的内存进行快照，好像已经有个说法叫增量快照了），感觉效率上应该能提升较大。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>计算机</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>分布式系统</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>6.5840：Lab1 - MapReduce</title>
     <link href="/2025/10/12/6.5840-1/"/>
     <url>/2025/10/12/6.5840-1/</url>
